@@ -69,13 +69,13 @@ public abstract class AbstractHashMap<K,V> extends AbstractMap<K,V> {
     /** Creates a hash table with capacity 17 and prime factor 109345121. */
     public AbstractHashMap() { this(17); }                     // default capacity
 
-    // ********** ADDED FOR EXERCISE 1 **********
-    // new constructor: lets user specify the maximum load factor
+    
+    // Ex 1new constructor lets user specify the maximum load factor
     public AbstractHashMap(int cap, double load) {
-        this(cap);        // reuse existing initialization
-        maxLoad = load;   // store user-defined load factor
+        this(cap);        
+        maxLoad = load;   
     }
-
+    /////////
     // public methods
     /**
      * Tests whether the map is empty.
@@ -175,3 +175,4 @@ public abstract class AbstractHashMap<K,V> extends AbstractMap<K,V> {
      */
     protected abstract V bucketRemove(int h, K k);
 }
+
