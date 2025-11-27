@@ -116,11 +116,10 @@ public abstract class AbstractHashMap<K,V> extends AbstractMap<K,V> {
         if (n > capacity / 2)              // keep load factor <= 0.5
             resize(2 * capacity - 1);        // (or find a nearby prime)
 
-        // ********** UPDATED FOR EXERCISE 1 **********
-        // use custom maxLoad instead of hardcoded 0.5
-        // if current load factor (n / capacity) is greater than maxLoad, resize
+        // Ex1 resize when table gets too full
         if ((double) n / capacity > maxLoad)
             resize(2 * capacity - 1);
+///////////
 
         return answer;
     }
@@ -175,4 +174,5 @@ public abstract class AbstractHashMap<K,V> extends AbstractMap<K,V> {
      */
     protected abstract V bucketRemove(int h, K k);
 }
+
 
